@@ -1,0 +1,36 @@
+﻿{
+    "OperationId":  "20260805-114033-279-2792",
+    "Mode":  "Cleanup",
+    "QuarantineRun":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114033-279-2792",
+    "StartedAt":  {
+                      "value":  "\/Date(1785930033284)\/",
+                      "DisplayHint":  2,
+                      "DateTime":  "Wednesday, August 5, 2026 11:40:33 AM"
+                  },
+    "CompletedAt":  {
+                        "value":  "\/Date(1785930033310)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Wednesday, August 5, 2026 11:40:33 AM"
+                    },
+    "OlderThanDays":  1,
+    "Paths":  [
+                  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\dwp-temp-cleanup-test"
+              ],
+    "Entries":  [
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\dwp-temp-cleanup-test\\old.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114033-279-2792\\Users_labuser_AppData_Local_Temp_2_dwp-temp-cleanup-test\\old.log",
+                        "LastWriteTimeUtc":  "\/Date(1785498032918)\/",
+                        "Length":  5,
+                        "OperationId":  "20260805-114033-279-2792",
+                        "ProcessedAtUtc":  "\/Date(1785930033306)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930034980)\/"
+                    }
+                ],
+    "RollbackCompletedAt":  {
+                                "value":  "\/Date(1785930034993)\/",
+                                "DisplayHint":  2,
+                                "DateTime":  "Wednesday, August 5, 2026 11:40:34 AM"
+                            }
+}

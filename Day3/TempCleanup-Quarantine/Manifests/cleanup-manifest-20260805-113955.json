@@ -1,0 +1,27 @@
+﻿{
+    "OperationId":  "20260805-113955",
+    "Mode":  "Cleanup",
+    "QuarantineRun":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-113955",
+    "StartedAt":  {
+                      "value":  "\/Date(1785929995450)\/",
+                      "DisplayHint":  2,
+                      "DateTime":  "Wednesday, August 5, 2026 11:39:55 AM"
+                  },
+    "CompletedAt":  {
+                        "value":  "\/Date(1785929995461)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Wednesday, August 5, 2026 11:39:55 AM"
+                    },
+    "OlderThanDays":  1,
+    "Paths":  [
+                  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\dwp-temp-cleanup-test"
+              ],
+    "Entries":  [
+
+                ],
+    "RollbackCompletedAt":  {
+                                "value":  "\/Date(1785929995646)\/",
+                                "DisplayHint":  2,
+                                "DateTime":  "Wednesday, August 5, 2026 11:39:55 AM"
+                            }
+}

@@ -1,0 +1,1067 @@
+﻿{
+    "OperationId":  "20260805-114153-494-6276",
+    "Mode":  "Cleanup",
+    "QuarantineRun":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276",
+    "StartedAt":  {
+                      "value":  "\/Date(1785930113525)\/",
+                      "DisplayHint":  2,
+                      "DateTime":  "Wednesday, August 5, 2026 11:41:53 AM"
+                  },
+    "CompletedAt":  {
+                        "value":  "\/Date(1785930115858)\/",
+                        "DisplayHint":  2,
+                        "DateTime":  "Wednesday, August 5, 2026 11:41:55 AM"
+                    },
+    "OlderThanDays":  0,
+    "Paths":  [
+                  "C:\\Users\\labuser\\AppData\\Local\\Temp\\",
+                  "C:\\Windows\\Temp"
+              ],
+    "Entries":  [
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\12765a45-7a85-4c03-a725-31a8d4ebe6ef.tmp",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\12765a45-7a85-4c03-a725-31a8d4ebe6ef.tmp",
+                        "LastWriteTimeUtc":  "\/Date(1785919705450)\/",
+                        "Length":  1526,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113620)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515685)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\7145f1b8-bcef-4634-a6bc-074e867f42e9.tmp",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\7145f1b8-bcef-4634-a6bc-074e867f42e9.tmp",
+                        "LastWriteTimeUtc":  "\/Date(1785919705450)\/",
+                        "Length":  234691,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113731)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515685)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\exthost-abea07.cpuprofile",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\exthost-abea07.cpuprofile",
+                        "LastWriteTimeUtc":  "\/Date(1785919731416)\/",
+                        "Length":  24494,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113779)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515702)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\dwp-temp-cleanup-test\\locked.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\locked.log",
+                        "LastWriteTimeUtc":  "\/Date(1785498032920)\/",
+                        "Length":  8,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113789)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515702)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\dwp-temp-cleanup-test\\new.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\new.log",
+                        "LastWriteTimeUtc":  "\/Date(1785930032919)\/",
+                        "Length":  5,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113795)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515717)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\dwp-temp-cleanup-test\\old.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\old.log",
+                        "LastWriteTimeUtc":  "\/Date(1785498032918)\/",
+                        "Length":  5,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113795)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515717)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\gen_py\\3.9\\dicts.dat",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\dicts.dat",
+                        "LastWriteTimeUtc":  "\/Date(1785919255199)\/",
+                        "Length":  10,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113810)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515732)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\gen_py\\3.9\\__init__.py",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\__init__.py",
+                        "LastWriteTimeUtc":  "\/Date(1785919255199)\/",
+                        "Length":  176,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113846)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515733)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\vscode-stable-system-x64\\CodeSetup-stable-df53daabb18cd157bdb08c7f01c34df936cf12f4.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\CodeSetup-stable-df53daabb18cd157bdb08c7f01c34df936cf12f4.exe",
+                        "LastWriteTimeUtc":  "\/Date(1785929857324)\/",
+                        "Length":  237798584,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113858)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515748)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Users\\labuser\\AppData\\Local\\Temp\\2\\vscode-stable-system-x64\\update-metadata.json",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Users_labuser_AppData_Local_Temp\\update-metadata.json",
+                        "LastWriteTimeUtc":  "\/Date(1785929866607)\/",
+                        "Length":  475,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113872)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515748)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\bb3a785178f443fda931098a5a9a306b.db.ses",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\bb3a785178f443fda931098a5a9a306b.db.ses",
+                        "LastWriteTimeUtc":  "\/Date(1785743900732)\/",
+                        "Length":  53,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113995)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515748)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\MpCmdRun.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\MpCmdRun.log",
+                        "LastWriteTimeUtc":  "\/Date(1785745339535)\/",
+                        "Length":  8562,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930113995)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515764)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\MpSigStub.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\MpSigStub.log",
+                        "LastWriteTimeUtc":  "\/Date(1785919056471)\/",
+                        "Length":  297448,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114011)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515780)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\silconfig.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\silconfig.log",
+                        "LastWriteTimeUtc":  "\/Date(1785926327530)\/",
+                        "Length":  102,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114011)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515780)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\_env.cmd",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\_env.cmd",
+                        "LastWriteTimeUtc":  "\/Date(1785743838995)\/",
+                        "Length":  1175,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114217)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515795)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\activitywatch\\0.13.2\\activitywatch-v0.13.2-windows-x86_64.zip",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\activitywatch-v0.13.2-windows-x86_64.zip",
+                        "LastWriteTimeUtc":  "\/Date(1785743641267)\/",
+                        "Length":  115013156,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114383)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515795)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\chocolatey.nuspec",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolatey.nuspec",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  3820,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114446)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515811)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\chocolatey.zip",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolatey.zip",
+                        "LastWriteTimeUtc":  "\/Date(1785743597462)\/",
+                        "Length":  4446219,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114633)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515811)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\[Content_Types].xml",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\[Content_Types].xml",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  932,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114645)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515856)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\package\\services\\metadata\\core-properties\\5ad4dc75cc79452d8e7e738cb4a3286e.psmdcp",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\5ad4dc75cc79452d8e7e738cb4a3286e.psmdcp",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  3495,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114676)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515936)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolateyInstall.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15846,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114692)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515951)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateysetup.psm1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolateysetup.psm1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  46947,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114696)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515951)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\init.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\init.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14383,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114708)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515967)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\VERIFICATION.txt",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\VERIFICATION.txt",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  1145,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114708)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515967)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\choco.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\choco.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  7613568,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114724)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515983)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\choco.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\choco.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  0,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114727)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515983)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\choco.exe.manifest",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\choco.exe.manifest",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  3106,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114803)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515998)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\CREDITS.txt",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\CREDITS.txt",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  46954,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114915)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515998)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\LICENSE.txt",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\LICENSE.txt",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  670,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114946)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930515998)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\chocolateyInstaller.psm1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolateyInstaller.psm1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16849,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114946)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516014)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\chocolateyProfile.psm1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolateyProfile.psm1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14124,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114961)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516030)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\chocolateyScriptRunner.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolateyScriptRunner.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16403,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114977)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516030)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\ChocolateyTabExpansion.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\ChocolateyTabExpansion.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  26408,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930114992)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516045)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Format-FileSize.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Format-FileSize.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14697,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115008)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516045)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-CheckSumValid.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-CheckSumValid.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  24450,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115008)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516061)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-ChocolateyPath.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-ChocolateyPath.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15636,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115024)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516061)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-ChocolateyUnzip.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-ChocolateyUnzip.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  23935,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115024)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516061)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-ChocolateyWebFile.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-ChocolateyWebFile.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  29453,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115039)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516077)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-EnvironmentVariable.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-EnvironmentVariable.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  17069,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115039)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516092)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-EnvironmentVariableNames.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-EnvironmentVariableNames.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15006,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115055)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516092)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-FtpFile.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-FtpFile.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  20892,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115055)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516092)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-OSArchitectureWidth.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-OSArchitectureWidth.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15877,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115070)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516108)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-PackageParameters.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-PackageParameters.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  20205,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115070)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516108)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-ToolsLocation.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-ToolsLocation.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16707,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115070)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516123)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-UACEnabled.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-UACEnabled.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14837,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115086)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516123)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-UninstallRegistryKey.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-UninstallRegistryKey.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  18977,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115086)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516139)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-VirusCheckValid.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-VirusCheckValid.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14761,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115102)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516139)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-WebFile.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-WebFile.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  25773,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115102)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516155)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-WebFileName.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-WebFileName.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  22193,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115117)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516155)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Get-WebHeaders.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Get-WebHeaders.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  18851,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115117)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516170)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-BinFile.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-BinFile.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  19229,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115133)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516170)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyEnvironmentVariable.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyEnvironmentVariable.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  17239,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115133)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516186)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyExplorerMenuItem.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyExplorerMenuItem.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  17495,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115133)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516186)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyFileAssociation.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyFileAssociation.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16026,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115149)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516186)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyInstallPackage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyInstallPackage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  27327,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115149)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516202)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyPackage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyPackage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  30119,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115149)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516261)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyPath.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyPath.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  17287,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115164)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516275)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyPinnedTaskBarItem.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyPinnedTaskBarItem.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15602,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115180)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516289)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyPowershellCommand.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyPowershellCommand.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  22265,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115180)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516303)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyShortcut.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyShortcut.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  20857,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115180)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516373)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyVsixPackage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyVsixPackage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  21951,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115195)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516386)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-ChocolateyZipPackage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-ChocolateyZipPackage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  23097,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115195)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516403)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Install-Vsix.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Install-Vsix.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15124,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115211)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516410)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Set-EnvironmentVariable.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Set-EnvironmentVariable.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  17409,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115211)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516416)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Set-PowerShellExitCode.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Set-PowerShellExitCode.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14657,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115211)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516424)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Start-ChocolateyProcessAsAdmin.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Start-ChocolateyProcessAsAdmin.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  29009,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115227)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516431)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Test-ProcessAdminRights.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Test-ProcessAdminRights.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14859,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115242)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516438)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Uninstall-BinFile.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Uninstall-BinFile.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16629,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115242)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516447)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Uninstall-ChocolateyEnvironmentVariable.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Uninstall-ChocolateyEnvironmentVariable.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16077,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115242)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516454)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Uninstall-ChocolateyPackage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Uninstall-ChocolateyPackage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  19009,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115258)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516454)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\UnInstall-ChocolateyZipPackage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\UnInstall-ChocolateyZipPackage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  15842,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115258)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516469)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Update-SessionEnvironment.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Update-SessionEnvironment.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  16558,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115274)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516469)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\helpers\\functions\\Write-FunctionCallLogMessage.ps1",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\Write-FunctionCallLogMessage.ps1",
+                        "LastWriteTimeUtc":  "\/Date(1683716010000)\/",
+                        "Length":  14920,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115274)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516469)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\choco.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\choco_1.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146048,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115320)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516486)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\choco.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\choco.exe_1.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115320)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516486)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\chocolatey.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolatey.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146560,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115350)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516501)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\chocolatey.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\chocolatey.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115359)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516501)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cinst.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cinst.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146560,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115378)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516517)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cinst.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cinst.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115389)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516533)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\clist.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\clist.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146560,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115399)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516533)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\clist.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\clist.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115408)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516533)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cpush.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cpush.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146560,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115416)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516549)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cpush.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cpush.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115416)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516549)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cuninst.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cuninst.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146560,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115432)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516564)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cuninst.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cuninst.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115432)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516564)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cup.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cup.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  146560,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115448)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516577)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\cup.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\cup.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115464)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516581)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\redirects\\RefreshEnv.cmd",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\RefreshEnv.cmd",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  2340,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115477)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516581)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\7z.dll",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\7z.dll",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  1167872,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115480)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516596)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\7z.dll.manifest",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\7z.dll.manifest",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  513,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115508)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516596)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\7z.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\7z.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  331776,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115511)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516608)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\7z.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\7z.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  0,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115527)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516612)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\7z.exe.manifest",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\7z.exe.manifest",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  513,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115527)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516612)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\7zip.license.txt",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\7zip.license.txt",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  1927,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115602)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516628)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\checksum.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\checksum.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  38528,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115606)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516639)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\checksum.exe.config",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\checksum.exe.config",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  150,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115622)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516644)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\checksum.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\checksum.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  0,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115633)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516644)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\checksum.license.txt",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\checksum.license.txt",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  95,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115654)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516660)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\shimgen.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\shimgen.exe",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  568448,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115654)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516660)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\shimgen.exe.ignore",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\shimgen.exe.ignore",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  0,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115701)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516676)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\tools\\chocolateyInstall\\tools\\shimgen.license.txt",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\shimgen.license.txt",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  3758,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115749)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516676)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\chocoInstall\\_rels\\.rels",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\.rels",
+                        "LastWriteTimeUtc":  "\/Date(1683716012000)\/",
+                        "Length":  495,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115838)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516691)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\vscode.install\\1.131.0\\install.log",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\install.log",
+                        "LastWriteTimeUtc":  "\/Date(1785743836682)\/",
+                        "Length":  1113900,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115847)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516691)\/"
+                    },
+                    {
+                        "OriginalPath":  "C:\\Windows\\Temp\\chocolatey\\vscode.install\\1.131.0\\VSCodeSetup-x64-1.131.0.exe",
+                        "QuarantinePath":  "C:\\Users\\labuser\\Documents\\training\\Day3\\TempCleanup-Quarantine\\20260805-114153-494-6276\\Windows_Temp\\VSCodeSetup-x64-1.131.0.exe",
+                        "LastWriteTimeUtc":  "\/Date(1785743750964)\/",
+                        "Length":  232347688,
+                        "OperationId":  "20260805-114153-494-6276",
+                        "ProcessedAtUtc":  "\/Date(1785930115855)\/",
+                        "Status":  "Restored",
+                        "RestoredAtUtc":  "\/Date(1785930516723)\/"
+                    }
+                ],
+    "RollbackCompletedAt":  {
+                                "value":  "\/Date(1785930516733)\/",
+                                "DisplayHint":  2,
+                                "DateTime":  "Wednesday, August 5, 2026 11:48:36 AM"
+                            }
+}

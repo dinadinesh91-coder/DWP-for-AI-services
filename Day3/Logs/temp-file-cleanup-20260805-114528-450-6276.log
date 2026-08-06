@@ -1,0 +1,21 @@
+[2026-08-05 11:45:28] [INFO] Script started. Parameter set: Cleanup
+[2026-08-05 11:45:28] [INFO] Cleanup requested. DryRun=True; OlderThanDays=0
+[2026-08-05 11:45:28] [INFO] Scanning path: C:\Users\labuser\AppData\Local\Temp\
+[2026-08-05 11:45:28] [WARN] Locked file skipped: C:\Users\labuser\AppData\Local\Temp\2\4685f84a-ccd7-46c5-b6c4-1f250918be09.tmp
+[2026-08-05 11:45:28] [WARN] Locked file skipped: C:\Users\labuser\AppData\Local\Temp\2\738c02f9-d7a0-4da1-a15f-740916207981.tmp
+[2026-08-05 11:45:28] [INFO] Scanning path: C:\Windows\Temp
+[2026-08-05 11:45:28] [INFO] Execution summary follows.
+[2026-08-05 11:45:28] [INFO] Summary OperationId: 20260805-114528-450-6276
+[2026-08-05 11:45:28] [INFO] Summary Mode: DryRun
+[2026-08-05 11:45:28] [INFO] Summary StartedAt: 8/5/2026 11:45:28 AM
+[2026-08-05 11:45:28] [INFO] Summary PathsScanned: 2
+[2026-08-05 11:45:28] [INFO] Summary FilesEnumerated: 2
+[2026-08-05 11:45:28] [INFO] Summary FilesEligible: 2
+[2026-08-05 11:45:28] [INFO] Summary FilesMoved: 0
+[2026-08-05 11:45:28] [INFO] Summary FilesSkippedLock: 2
+[2026-08-05 11:45:28] [INFO] Summary FilesMissing: 0
+[2026-08-05 11:45:28] [INFO] Summary Errors: 0
+[2026-08-05 11:45:28] [INFO] Summary ManifestPath: 
+[2026-08-05 11:45:28] [INFO] Summary CompletedAt: 8/5/2026 11:45:28 AM
+[2026-08-05 11:45:28] [INFO] Summary ManifestEntries: 0
+[2026-08-05 11:45:28] [INFO] Script completed.

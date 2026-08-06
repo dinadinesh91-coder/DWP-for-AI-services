@@ -1,0 +1,5 @@
+[2026-08-05 11:39:42] [INFO] Script started. Parameter set: Rollback
+[2026-08-05 11:39:42] [INFO] Rollback requested. Using manifest: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-113942.json
+[2026-08-05 11:39:42] [INFO] Restored file: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\20260805-113942\Users_labuser_AppData_Local_Temp_2_dwp-temp-cleanup-test\old.log -> C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\old.log
+[2026-08-05 11:39:42] [ERROR] Script failed: Exception setting "RollbackCompletedAt": "The property 'RollbackCompletedAt' cannot be found on this object. Verify that the property exists and can be set."
+[2026-08-05 11:39:42] [INFO] Script completed.

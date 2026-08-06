@@ -1,0 +1,14 @@
+[2026-08-05 11:40:34] [INFO] Script started. Parameter set: Rollback
+[2026-08-05 11:40:34] [INFO] Rollback requested. Using manifest: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-114033-279-2792.json
+[2026-08-05 11:40:34] [INFO] Restored file: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\20260805-114033-279-2792\Users_labuser_AppData_Local_Temp_2_dwp-temp-cleanup-test\old.log -> C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\old.log
+[2026-08-05 11:40:35] [INFO] Execution summary follows.
+[2026-08-05 11:40:35] [INFO] Summary Mode: Rollback
+[2026-08-05 11:40:35] [INFO] Summary ManifestPath: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-114033-279-2792.json
+[2026-08-05 11:40:35] [INFO] Summary StartedAt: 8/5/2026 11:40:34 AM
+[2026-08-05 11:40:35] [INFO] Summary EntriesRead: 1
+[2026-08-05 11:40:35] [INFO] Summary FilesRestored: 1
+[2026-08-05 11:40:35] [INFO] Summary FilesAlreadyExist: 0
+[2026-08-05 11:40:35] [INFO] Summary FilesMissing: 0
+[2026-08-05 11:40:35] [INFO] Summary Errors: 0
+[2026-08-05 11:40:35] [INFO] Summary CompletedAt: 8/5/2026 11:40:35 AM
+[2026-08-05 11:40:35] [INFO] Script completed.

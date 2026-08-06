@@ -1,0 +1,13 @@
+[2026-08-05 11:39:55] [INFO] Script started. Parameter set: Rollback
+[2026-08-05 11:39:55] [INFO] Rollback requested. Using manifest: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-113955.json
+[2026-08-05 11:39:55] [INFO] Execution summary follows.
+[2026-08-05 11:39:55] [INFO] Summary Mode: Rollback
+[2026-08-05 11:39:55] [INFO] Summary ManifestPath: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-113955.json
+[2026-08-05 11:39:55] [INFO] Summary StartedAt: 8/5/2026 11:39:55 AM
+[2026-08-05 11:39:55] [INFO] Summary EntriesRead: 0
+[2026-08-05 11:39:56] [INFO] Summary FilesRestored: 0
+[2026-08-05 11:39:56] [INFO] Summary FilesAlreadyExist: 0
+[2026-08-05 11:39:56] [INFO] Summary FilesMissing: 0
+[2026-08-05 11:39:56] [INFO] Summary Errors: 0
+[2026-08-05 11:39:56] [INFO] Summary CompletedAt: 8/5/2026 11:39:55 AM
+[2026-08-05 11:39:56] [INFO] Script completed.

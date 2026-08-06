@@ -1,0 +1,7 @@
+[2026-08-05 11:39:07] [INFO] Script started. Parameter set: Cleanup
+[2026-08-05 11:39:07] [INFO] Cleanup requested. DryRun=False; OlderThanDays=1
+[2026-08-05 11:39:07] [INFO] Scanning path: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test
+[2026-08-05 11:39:07] [WARN] Locked file skipped: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\locked.log
+[2026-08-05 11:39:07] [INFO] Moved file to quarantine: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\old.log -> C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\20260805-113907\Users_labuser_AppData_Local_Temp_2_dwp-temp-cleanup-test\old.log
+[2026-08-05 11:39:08] [ERROR] Script failed: Argument types do not match
+[2026-08-05 11:39:08] [INFO] Script completed.

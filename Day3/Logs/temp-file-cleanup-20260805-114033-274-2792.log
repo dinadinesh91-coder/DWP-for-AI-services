@@ -1,0 +1,21 @@
+[2026-08-05 11:40:33] [INFO] Script started. Parameter set: Cleanup
+[2026-08-05 11:40:33] [INFO] Cleanup requested. DryRun=False; OlderThanDays=1
+[2026-08-05 11:40:33] [INFO] Scanning path: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test
+[2026-08-05 11:40:33] [WARN] Locked file skipped: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\locked.log
+[2026-08-05 11:40:33] [INFO] Moved file to quarantine: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\old.log -> C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\20260805-114033-279-2792\Users_labuser_AppData_Local_Temp_2_dwp-temp-cleanup-test\old.log
+[2026-08-05 11:40:33] [INFO] Manifest written: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-114033-279-2792.json
+[2026-08-05 11:40:33] [INFO] Execution summary follows.
+[2026-08-05 11:40:33] [INFO] Summary OperationId: 20260805-114033-279-2792
+[2026-08-05 11:40:33] [INFO] Summary Mode: Cleanup
+[2026-08-05 11:40:33] [INFO] Summary StartedAt: 8/5/2026 11:40:33 AM
+[2026-08-05 11:40:33] [INFO] Summary PathsScanned: 1
+[2026-08-05 11:40:33] [INFO] Summary FilesEnumerated: 2
+[2026-08-05 11:40:33] [INFO] Summary FilesEligible: 2
+[2026-08-05 11:40:33] [INFO] Summary FilesMoved: 1
+[2026-08-05 11:40:33] [INFO] Summary FilesSkippedLock: 1
+[2026-08-05 11:40:33] [INFO] Summary FilesMissing: 0
+[2026-08-05 11:40:33] [INFO] Summary Errors: 0
+[2026-08-05 11:40:33] [INFO] Summary ManifestPath: C:\Users\labuser\Documents\training\Day3\TempCleanup-Quarantine\Manifests\cleanup-manifest-20260805-114033-279-2792.json
+[2026-08-05 11:40:33] [INFO] Summary CompletedAt: 8/5/2026 11:40:33 AM
+[2026-08-05 11:40:33] [INFO] Summary ManifestEntries: 1
+[2026-08-05 11:40:33] [INFO] Script completed.

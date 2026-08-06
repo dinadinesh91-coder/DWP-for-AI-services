@@ -1,0 +1,19 @@
+[2026-08-05 11:39:06] [INFO] Script started. Parameter set: Cleanup
+[2026-08-05 11:39:06] [INFO] Cleanup requested. DryRun=True; OlderThanDays=1
+[2026-08-05 11:39:07] [INFO] Scanning path: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test
+[2026-08-05 11:39:07] [WARN] Locked file skipped: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\locked.log
+[2026-08-05 11:39:07] [INFO] Dry run candidate: C:\Users\labuser\AppData\Local\Temp\2\dwp-temp-cleanup-test\old.log
+[2026-08-05 11:39:07] [INFO] Execution summary follows.
+[2026-08-05 11:39:07] [INFO] Summary OperationId: 20260805-113906
+[2026-08-05 11:39:07] [INFO] Summary Mode: DryRun
+[2026-08-05 11:39:07] [INFO] Summary StartedAt: 8/5/2026 11:39:07 AM
+[2026-08-05 11:39:07] [INFO] Summary PathsScanned: 1
+[2026-08-05 11:39:07] [INFO] Summary FilesEnumerated: 2
+[2026-08-05 11:39:07] [INFO] Summary FilesEligible: 2
+[2026-08-05 11:39:07] [INFO] Summary FilesMoved: 0
+[2026-08-05 11:39:07] [INFO] Summary FilesSkippedLock: 1
+[2026-08-05 11:39:07] [INFO] Summary FilesMissing: 0
+[2026-08-05 11:39:07] [INFO] Summary Errors: 0
+[2026-08-05 11:39:07] [INFO] Summary CompletedAt: 8/5/2026 11:39:07 AM
+[2026-08-05 11:39:07] [INFO] Summary ManifestEntries: 0
+[2026-08-05 11:39:07] [INFO] Script completed.
