@@ -1,115 +1,463 @@
-# Runbook: AVD Black Screen After Login (POOL-FIN-01)
+# KB: AVD Black Screen After Login (POOL-FIN-01)
 
-## Version Header
-- Title: AVD Black Screen After Login (POOL-FIN-01)
-- Version: 1.0
-- Date: 07/08/2026
-- Author: Sathishbabu
-- reviewed: self
-- status: draft
-- change: initial version from RCA
+Version header: v 1.0, 07/08/2026, status : Draft
 
-## Prerequisites
-- [ ] Access check: Confirm your account has Desktop Virtualization Contributor on the POOL-FIN-01 and POOL-FIN-02 resource groups. [ELEVATED]
-- [ ] Access check: Confirm your account has Virtual Machine Contributor on all session host VMs in POOL-FIN-01. [ELEVATED]
-- [ ] Access check: Confirm your account has permission to update Entra ID group membership used for AVD app-group assignment. [ELEVATED]
-- [ ] Access check: Confirm your account has Log Analytics Reader on the AVD diagnostics workspace.
-- [ ] Tool check: Sign in to Azure Portal from an admin workstation.
-- [ ] Tool check: Confirm Azure CLI is installed by running `az --version` in PowerShell.
-- [ ] Tool check: Confirm Remote Desktop client is installed for test login validation.
-- [ ] Mandatory end-user info: Collect affected username (UPN and SAM), for example `cthompson@finbridge.local` and `FINBRIDGE\\cthompson`.
-- [ ] Mandatory end-user info: Collect exact failure time window in local time and UTC.
-- [ ] Mandatory end-user info: Collect impacted host pool name and app group name shown to user at login.
-- [ ] Mandatory end-user info: Collect client type used by user (Windows app, web client, or thin client).
-- [ ] Mandatory end-user info: Collect screenshot text or error prompt shown during black-screen event.
-- [ ] Mandatory end-user info: Collect whether screen stays black or clears after ~30 seconds.
-- [ ] Mandatory operations info: Identify healthy fallback app group mapped to POOL-FIN-02.
-- [ ] Mandatory operations info: Identify last known-good image version ID from the previous successful deployment change record.
-- [ ] Mandatory operations info: Identify POOL-FIN-01 VMSS name and resource group for session hosts.
-- [ ] Mandatory operations info: Confirm incident ticket ID is open and assigned.
+## Background
+POOL-FIN-01 is the Finance Azure Virtual Desktop host pool used for production user desktops. Session hosts are delivered from a VM scale set image, so one bad image change can affect many users at once. This incident matters because users can authenticate successfully and still fail to reach a usable desktop, which looks like a generic AVD outage unless the engineer checks the host-pool split, image version, and host-side render path.
 
-## Procedure
-1. Open Azure Portal and go to `Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts`. Expected result: session host list for POOL-FIN-01 is displayed.
-2. Open Azure Portal and go to `Azure Monitor > Logs > <AVD-Log-Analytics-Workspace>`. Expected result: the query editor opens for the AVD workspace.
-3. Run this query in Log Analytics:
+POOL-FIN-02 is the comparison pool for this incident. It remained healthy and is the control group that proves the issue is not a tenant-wide Azure Virtual Desktop platform failure.
+
+## Symptom
+What the engineer observes:
+- A spike of successful sign-ins followed by unusable sessions in POOL-FIN-01.
+- Session hosts in POOL-FIN-01 remain reachable and usually show Available in Azure Virtual Desktop.
+- POOL-FIN-02 continues to accept normal user sessions during the same time window.
+- The issue starts after the 02:00 image update wave and is reported from about 07:00 onward.
+
+What the user reports:
+- The user can sign in to AVD, but the desktop stays black.
+- For some users the black screen clears after about 30 seconds.
+- For other users the black screen persists until they disconnect.
+- User data is intact; the failure is in desktop rendering after sign-in, not account authentication.
+
+## Root Cause
+Specific technical cause:
+- A graphics driver regression was introduced by the 02:00 overnight image update applied to POOL-FIN-01 session hosts.
+
+Evidence that confirms it:
+- Change isolation: POOL-FIN-01 received the overnight image update; POOL-FIN-02 did not.
+- Scope isolation: about 40% of Finance users on POOL-FIN-01 were affected; POOL-FIN-02 was unaffected.
+- Timing isolation: the symptom started after the image update window, not before it.
+- Recovery proof: service returned to normal only after the image-focused corrective action was applied to POOL-FIN-01.
+- Supporting host evidence: affected hosts can show render-path disruption in Windows System log event data after user logon, while authentication and session creation events still complete.
+
+Important diagnostic note:
+- This incident does not have one unique Azure Virtual Desktop broker error code that proves the case by itself. Confirmation comes from the combination of pool comparison, image comparison, host-side render evidence, and successful rollback canary outcome.
+
+## Detection
+Confirm all mandatory checks below before changing the image. Treat POOL-FIN-02 as the control group in every comparison.
+
+### 1. Confirm the symptom is pool-specific in Log Analytics
+Portal path:
+- Azure Portal > Azure Monitor > Logs > <AVD Log Analytics Workspace>
+
+Log/table:
+- WVDConnections
+
+Fields to inspect:
+- HostPoolName
+- UserName
+- SessionHostName
+- ConnectionState
+- CorrelationId
+- TimeGenerated
+
+Query:
 ```kusto
 WVDConnections
 | where TimeGenerated between (ago(6h) .. now())
-| where HostPoolName =~ "POOL-FIN-01"
-| project TimeGenerated, UserName, HostPoolName, SessionHostName, ConnectionState, CorrelationId
+| where HostPoolName in~ ("POOL-FIN-01", "POOL-FIN-02")
+| project TimeGenerated, HostPoolName, UserName, SessionHostName, ConnectionState, CorrelationId
 | order by TimeGenerated desc
 ```
-Expected result: recent POOL-FIN-01 connection events are returned.
-4. Run this query in Log Analytics:
+
+What to look for:
+- POOL-FIN-01 shows the affected users connecting in the incident window.
+- POOL-FIN-02 shows normal connected sessions in the same period.
+- The pool split must be clear: impacted users are concentrated in POOL-FIN-01, not across both pools.
+
+### 2. Check for broker or agent errors, but do not use them as the sole decision point
+Portal path:
+- Azure Portal > Azure Monitor > Logs > <AVD Log Analytics Workspace>
+
+Log/table:
+- WVDErrors
+
+Fields to inspect:
+- HostPoolName
+- UserName
+- SessionHostName
+- Code
+- Message
+- CorrelationId
+- TimeGenerated
+
+Query:
 ```kusto
 WVDErrors
 | where TimeGenerated between (ago(6h) .. now())
-| where HostPoolName =~ "POOL-FIN-01"
-| project TimeGenerated, UserName, SessionHostName, Code, Message, CorrelationId
+| where HostPoolName in~ ("POOL-FIN-01", "POOL-FIN-02")
+| project TimeGenerated, HostPoolName, UserName, SessionHostName, Code, Message, CorrelationId
 | order by TimeGenerated desc
 ```
-Expected result: recent AVD broker/agent error events for POOL-FIN-01 are returned.
-5. Open one impacted session host VM from `Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts > <host> > Virtual machine`. Expected result: VM overview page for the selected host is displayed.
-6. Connect to the selected session host using Bastion or approved admin access method. [ELEVATED] Expected result: you have an admin session on the host.
-7. Open Event Viewer on the host at `Event Viewer > Applications and Services Logs > Microsoft > Windows > TerminalServices-LocalSessionManager > Operational`. [ELEVATED] Expected result: RDS session lifecycle events are visible.
-8. Open Event Viewer on the host at `Event Viewer > Applications and Services Logs > Microsoft > Windows > RemoteDesktopServices-RdpCoreTS > Operational`. [ELEVATED] Expected result: RDP transport/connection events are visible.
-9. Open FSLogix logs at `C:\ProgramData\FSLogix\Logs\Profile\` on the host. [ELEVATED] Expected result: profile attach/detach log files are visible with current timestamps.
-10. Set `Allow new sessions` to `No` for each affected POOL-FIN-01 session host from `Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts`. [ELEVATED] Expected result: affected hosts show drain mode and stop accepting new logins.
-11. Add affected users to the fallback app-group assignment for POOL-FIN-02 in `Azure Virtual Desktop > Application groups > <POOL-FIN-02-App-Group> > Assignments`. [ELEVATED] Expected result: affected users can launch a working desktop via POOL-FIN-02.
-12. Record the current image reference ID in the incident ticket by running this command in Azure Cloud Shell PowerShell: `az vmss show --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --query virtualMachineProfile.storageProfile.imageReference.id -o tsv`. [ELEVATED] Expected result: ticket contains exact pre-change image reference ID.
-13. Set the VMSS image to the known-good image version ID by running this command in Azure Cloud Shell PowerShell: `az vmss update --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --set virtualMachineProfile.storageProfile.imageReference.id=<KNOWN_GOOD_IMAGE_VERSION_ID>`. [ELEVATED] Expected result: VMSS model points to the known-good image.
-14. Trigger model rollout to one canary instance by running this command in Azure Cloud Shell PowerShell: `az vmss update-instances --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --instance-ids <CANARY_INSTANCE_ID>`. [ELEVATED] Expected result: canary instance applies the updated model.
-15. Confirm canary provisioning completion in Azure Portal at `Virtual machine scale sets > <POOL-FIN-01-VMSS-NAME> > Instances`. [ELEVATED] Expected result: canary instance shows Provisioning state Succeeded.
-16. Perform one test login to the canary host using an affected user account. Expected result: desktop loads without black screen.
-17. Roll out the same image model to all remaining instances by running this command in Azure Cloud Shell PowerShell: `az vmss update-instances --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --instance-ids "*"`. [ELEVATED] Expected result: all instances start applying the known-good model.
-18. Confirm full rollout completion in Azure Portal at `Virtual machine scale sets > <POOL-FIN-01-VMSS-NAME> > Instances`. [ELEVATED] Expected result: all targeted instances show Provisioning state Succeeded.
-19. Set `Allow new sessions` to `Yes` on remediated POOL-FIN-01 session hosts. [ELEVATED] Expected result: remediated hosts accept new user sessions.
-20. Remove temporary fallback assignment from users in `Azure Virtual Desktop > Application groups > <POOL-FIN-02-App-Group> > Assignments`. [ELEVATED] Expected result: users route back to normal POOL-FIN-01 path.
-21. Add closure timeline entries to the incident ticket for workaround start, canary validation, full rollout finish, and user confirmation. Expected result: ticket contains a complete and auditable execution timeline.
+
+What to look for:
+- POOL-FIN-01 may show session-related errors or retries during the affected window.
+- POOL-FIN-02 should not show a matching spike for the same users or time range.
+- If both pools show the same error pattern, stop and investigate a shared service issue instead of this KB.
+
+### 3. Confirm session creation completed on an affected host
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts > <affected-host> > Virtual machine
+
+Host log location:
+- Event Viewer > Applications and Services Logs > Microsoft > Windows > TerminalServices-LocalSessionManager > Operational
+
+Event IDs to inspect:
+- Event ID 21
+- Event ID 22
+- Event ID 24
+
+Fields to inspect in each event:
+- Date and Time
+- User
+- Session ID
+- Address
+- EventData text around shell start or disconnect timing
+
+What to look for:
+- Event ID 21 around the user-reported sign-in time confirms session logon succeeded.
+- Event ID 22 shortly after Event ID 21 confirms the shell-start notification path was reached.
+- Event ID 24 soon after Event ID 21 or 22 is supporting evidence when users disconnect because the desktop never becomes usable.
+
+Interpretation:
+- If Event ID 21 and Event ID 22 exist but the user still sees a black screen, the failure is after authentication and during desktop rendering or shell presentation.
+
+### 4. Check for host-side graphics reset evidence
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts > <affected-host> > Virtual machine
+
+Host log location:
+- Event Viewer > Windows Logs > System
+
+Event IDs to inspect:
+- Event ID 4101 from source Display
+
+Fields to inspect:
+- Logged
+- Source
+- Event ID
+- General message text
+
+What to look for:
+- Event ID 4101 near the same timestamp as the failed user logon.
+- Message pattern: display driver stopped responding and recovered.
+
+Interpretation:
+- Event ID 4101 is strong supporting evidence for this KB because it lines up with a graphics-path regression after image deployment.
+- Absence of Event ID 4101 does not fully rule the issue out; the decisive comparison remains the image and pool split.
+
+### 5. Exclude FSLogix profile attach as the primary cause
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts > <affected-host> > Virtual machine
+
+Host log location:
+- C:\ProgramData\FSLogix\Logs\Profile\<latest-log>.log
+
+Fields or strings to inspect:
+- Username
+- SID
+- VHD or VHDX path
+- Status
+- ERROR
+- Failed
+
+What to look for:
+- The user appears in the log for the incident time window.
+- Profile attach completes, or at least does not fail in a way that explains the whole symptom.
+- There is no repeating attach failure pattern on POOL-FIN-01 that would make this an FSLogix incident instead.
+
+Interpretation:
+- If FSLogix shows clean attach activity but the screen remains black, stay on this KB.
+- If FSLogix shows hard attach failures for the same users and same hosts, use the FSLogix troubleshooting path instead.
+
+### 6. Compare image state between the bad pool and the healthy control pool
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Commands:
+```powershell
+az vmss show --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --query virtualMachineProfile.storageProfile.imageReference.id -o tsv
+az vmss show --resource-group <POOL-FIN-02-VMSS-RG> --name <POOL-FIN-02-VMSS-NAME> --query virtualMachineProfile.storageProfile.imageReference.id -o tsv
+```
+
+Fields to inspect:
+- virtualMachineProfile.storageProfile.imageReference.id
+
+What to look for:
+- POOL-FIN-01 is on the newly deployed image version.
+- POOL-FIN-02 is on a different or older known-good image.
+
+Interpretation:
+- This is the mandatory comparison check for this incident. If both pools are on the same image and only one pool fails, this KB is not yet proven.
+
+### 7. Final confidence threshold before action
+Treat this issue as confirmed when all three conditions are true:
+- POOL-FIN-01 is the only affected pool and POOL-FIN-02 is healthy.
+- POOL-FIN-01 is on the changed image and POOL-FIN-02 is not.
+- Host evidence shows successful session creation with post-logon render failure, with or without System Event ID 4101.
+
+## Resolution
+Use the image rollback or corrected image path. Do not reopen POOL-FIN-01 to new sessions until the canary host is proven good.
+
+### 1. Drain the affected pool
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts
+
+Action:
+- Set Allow new sessions = No on each affected POOL-FIN-01 session host.
+
+Expected result:
+- New user logons stop landing on unstable hosts.
+
+### 2. Move impacted users to the healthy pool
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Application groups > <POOL-FIN-02-Desktop-App-Group> > Assignments
+
+Action:
+- Add affected users or the approved fallback group to the POOL-FIN-02 desktop application group.
+
+Expected result:
+- Users can launch a working desktop through POOL-FIN-02 while POOL-FIN-01 is repaired.
+
+### 3. Record the current bad image reference before changing anything
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Action:
+```powershell
+az vmss show --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --query virtualMachineProfile.storageProfile.imageReference.id -o tsv
+```
+
+Expected result:
+- The exact current image reference ID is captured in the incident ticket as the pre-change value.
+
+### 4. Change the VM scale set model back to the known-good image
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Action:
+```powershell
+az vmss update --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --set virtualMachineProfile.storageProfile.imageReference.id=<KNOWN_GOOD_IMAGE_VERSION_ID>
+```
+
+Expected result:
+- The VMSS model for POOL-FIN-01 points to the known-good image version.
+
+### 5. Apply the change to one canary instance first
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Action:
+```powershell
+az vmss update-instances --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --instance-ids <CANARY_INSTANCE_ID>
+```
+
+Expected result:
+- One instance starts applying the corrected VMSS model.
+
+### 6. Wait for the canary instance to finish provisioning
+Portal path:
+- Azure Portal > Virtual machine scale sets > <POOL-FIN-01-VMSS-NAME> > Instances
+
+Action:
+- Open the canary instance and monitor Provisioning state.
+
+Expected result:
+- Provisioning state = Succeeded.
+
+### 7. Validate user logon on the canary host
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts
+
+Action:
+- Allow a controlled test sign-in to the canary host using an affected user account or approved test account.
+
+Expected result:
+- The desktop renders normally and the black-screen symptom does not reproduce.
+
+### 8. Roll the corrected image to the remaining instances
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Action:
+```powershell
+az vmss update-instances --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --instance-ids "*"
+```
+
+Expected result:
+- All remaining POOL-FIN-01 instances begin applying the corrected image model.
+
+### 9. Confirm all instances completed the rollout
+Portal path:
+- Azure Portal > Virtual machine scale sets > <POOL-FIN-01-VMSS-NAME> > Instances
+
+Action:
+- Review every instance status.
+
+Expected result:
+- All targeted instances show Provisioning state = Succeeded.
+
+### 10. Reopen the repaired pool to production sessions
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts
+
+Action:
+- Set Allow new sessions = Yes on the remediated hosts.
+
+Expected result:
+- POOL-FIN-01 starts accepting new sessions again.
+
+### 11. Remove the temporary fallback routing
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Application groups > <POOL-FIN-02-Desktop-App-Group> > Assignments
+
+Action:
+- Remove the temporary user or group assignment added for the incident.
+
+Expected result:
+- Users route back to the standard POOL-FIN-01 access path.
 
 ## Verification
-1. Open Azure Portal and go to `Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts`. Expected result: all remediated hosts show `Status = Available` and `Allow new sessions = Yes`.
-2. Open Azure Portal and go to `Azure Monitor > Logs > <AVD-Log-Analytics-Workspace>`. Expected result: Log Analytics query editor is open.
-3. Run this query in Log Analytics:
+### 1. Verify host readiness in Azure Virtual Desktop
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts
+
+Expected result:
+- Status = Available
+- Allow new sessions = Yes
+
+### 2. Verify successful post-fix connections in Log Analytics
+Portal path:
+- Azure Portal > Azure Monitor > Logs > <AVD Log Analytics Workspace>
+
+Log/table:
+- WVDConnections
+
+Fields to inspect:
+- HostPoolName
+- ConnectionState
+- SessionHostName
+- TimeGenerated
+
+Query:
 ```kusto
 WVDConnections
 | where TimeGenerated between (ago(30m) .. now())
 | where HostPoolName =~ "POOL-FIN-01"
-| where ConnectionState =~ "Connected"
-| summarize SuccessfulConnections=count() by SessionHostName
+| summarize SuccessfulConnections=count() by SessionHostName, ConnectionState
 | order by SuccessfulConnections desc
 ```
-Expected result: successful connection counts are returned for POOL-FIN-01 hosts.
-4. Run this query in Log Analytics:
-```kusto
-WVDErrors
-| where TimeGenerated between (ago(30m) .. now())
-| where HostPoolName =~ "POOL-FIN-01"
-| summarize ErrorCount=count() by Code, Message
-| order by ErrorCount desc
-```
-Expected result: error summary is low or zero and shows no active spike.
-5. Run this query in Log Analytics:
+
+Expected result:
+- New sessions in POOL-FIN-01 complete with normal connected state.
+
+### 3. Verify the control pool is no longer carrying incident traffic
+Portal path:
+- Azure Portal > Azure Monitor > Logs > <AVD Log Analytics Workspace>
+
+Log/table:
+- WVDConnections
+
+Fields to inspect:
+- HostPoolName
+- TimeGenerated
+
+Query:
 ```kusto
 WVDConnections
 | where TimeGenerated between (ago(30m) .. now())
 | where HostPoolName =~ "POOL-FIN-02"
-| summarize FallbackConnections=count()
+| summarize FallbackConnections=count() by bin(TimeGenerated, 5m)
+| order by TimeGenerated desc
 ```
-Expected result: fallback connection count is stable or dropping after users are moved back.
-6. Open Azure Portal and go to `Azure Virtual Desktop > Application groups > <POOL-FIN-02-App-Group> > Assignments`. Expected result: temporary incident users are removed from fallback assignment.
-7. Connect to one remediated session host and open `Event Viewer > Applications and Services Logs > Microsoft > Windows > TerminalServices-LocalSessionManager > Operational`. [ELEVATED] Expected result: new successful session creation events are present with current timestamps.
-8. Open `C:\ProgramData\FSLogix\Logs\Profile\` on the same session host and open the newest log file. [ELEVATED] Expected result: no current profile attach failures for tested users.
-9. Record evidence in the incident ticket with query export screenshots, tested usernames, session host names, and timestamps. Expected result: closure packet is complete and auditable.
 
-## Rollback (3-Minute Execution Target)
-1. Open Azure Portal and go to `Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts`. Expected result: POOL-FIN-01 host list is visible.
-2. Set `Allow new sessions = No` for all POOL-FIN-01 session hosts. [ELEVATED] Expected result: new user logons to unstable hosts stop immediately.
-3. Open Azure Portal and go to `Azure Virtual Desktop > Application groups > <POOL-FIN-02-App-Group> > Assignments`. Expected result: assignment blade is open.
-4. Add all currently impacted users to `<POOL-FIN-02-App-Group>` assignments. [ELEVATED] Expected result: impacted users can launch fallback desktops immediately.
-5. Open Azure Cloud Shell (PowerShell) and run this command exactly: `az vmss update --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --set virtualMachineProfile.storageProfile.imageReference.id=<PRE_CHANGE_IMAGE_ID>`. [ELEVATED] Expected result: VMSS model points to the pre-change image.
-6. In Azure Cloud Shell (PowerShell), run this command exactly: `az vmss update-instances --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --instance-ids "*"`. [ELEVATED] Expected result: rollback rollout starts on all instances.
-7. Open Azure Portal and go to `Azure Monitor > Logs > <AVD-Log-Analytics-Workspace>` and run this query:
+Expected result:
+- Fallback usage is flat or decreasing after users are moved back.
+
+### 4. Verify host-side session creation without repeat render symptoms
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts > <tested-host> > Virtual machine
+
+Host log locations:
+- Event Viewer > Applications and Services Logs > Microsoft > Windows > TerminalServices-LocalSessionManager > Operational
+- Event Viewer > Windows Logs > System
+
+Event IDs to inspect:
+- Event ID 21
+- Event ID 22
+- Event ID 4101
+
+Expected result:
+- New Event ID 21 and Event ID 22 entries exist for the successful validation logon.
+- No new Event ID 4101 entries are generated during the successful validation attempt.
+
+### 5. Verify no active fallback assignments remain
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Application groups > <POOL-FIN-02-Desktop-App-Group> > Assignments
+
+Expected result:
+- Temporary incident assignments are removed.
+
+## Rollback
+Use rollback immediately if the canary host still shows a black screen, provisioning fails, or the corrected image causes broader instability.
+
+### 1. Stop new sessions landing on the changed hosts
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Host pools > POOL-FIN-01 > Session hosts
+
+Action:
+- Set Allow new sessions = No for all POOL-FIN-01 hosts.
+
+Expected result:
+- No additional users are routed onto unstable hosts.
+
+### 2. Re-enable the healthy fallback path
+Portal path:
+- Azure Portal > Azure Virtual Desktop > Application groups > <POOL-FIN-02-Desktop-App-Group> > Assignments
+
+Action:
+- Add currently impacted users back to the POOL-FIN-02 assignment.
+
+Expected result:
+- Users can work immediately on the healthy control pool.
+
+### 3. Restore the pre-change image reference on POOL-FIN-01
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Action:
+```powershell
+az vmss update --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --set virtualMachineProfile.storageProfile.imageReference.id=<PRE_CHANGE_IMAGE_ID>
+```
+
+Expected result:
+- The VMSS model points back to the exact pre-change image recorded earlier.
+
+### 4. Apply the rollback to all POOL-FIN-01 instances
+Portal path:
+- Azure Portal > Cloud Shell > PowerShell
+
+Action:
+```powershell
+az vmss update-instances --resource-group <POOL-FIN-01-VMSS-RG> --name <POOL-FIN-01-VMSS-NAME> --instance-ids "*"
+```
+
+Expected result:
+- All POOL-FIN-01 instances begin moving back to the pre-change image state.
+
+### 5. Confirm rollback traffic is stable on the healthy pool
+Portal path:
+- Azure Portal > Azure Monitor > Logs > <AVD Log Analytics Workspace>
+
+Log/table:
+- WVDConnections
+
+Fields to inspect:
+- HostPoolName
+- TimeGenerated
+
+Query:
 ```kusto
 WVDConnections
 | where TimeGenerated between (ago(15m) .. now())
@@ -117,13 +465,40 @@ WVDConnections
 | summarize ActiveFallbackConnections=count() by bin(TimeGenerated, 5m)
 | order by TimeGenerated desc
 ```
-Expected result: active fallback connections are visible during rollback.
-8. Post rollback start time, commands executed, and fallback-routing status in the incident ticket and on-call channel. Expected result: all responders have one confirmed rollback status update.
 
-## Notes
-- Symptom profile from RCA: black screen appears immediately after login in POOL-FIN-01; some sessions recover after about 30 seconds and some do not.
-- Scope from RCA: partial impact in POOL-FIN-01 and no impact in POOL-FIN-02.
-- Known cause from RCA set: image-introduced graphics driver regression in the 02:00 POOL-FIN-01 update wave.
-- Warning: this RCA set does not provide a reliable event-ID signature for detection, so use pool-scope and post-update timing as primary triage signals.
-- Edge case: if only a subset of hosts fail after rollback, compare image version drift host-by-host before resuming user routing.
-- Related incident records: Day4 analysis hypothesis, known error record, and closure note for AVD black screen in POOL-FIN-01.
+Expected result:
+- Users continue to connect successfully to POOL-FIN-02 while POOL-FIN-01 is being restored.
+
+## Preventive
+Apply all of the following process and tooling changes. Generic advice is not sufficient for this incident class.
+
+1. Split image rollout into named rings.
+- Create at least three VMSS rollout rings for AVD images: pilot, finance-canary, production.
+- Pilot ring must complete before POOL-FIN-01 is eligible for change.
+
+2. Add a mandatory pool-to-pool image drift check in the release checklist.
+- Record the exact value of virtualMachineProfile.storageProfile.imageReference.id for POOL-FIN-01 and POOL-FIN-02 before and after rollout.
+- Block production release if the comparison is missing from the change record.
+
+3. Add a post-image automated smoke test for desktop rendering.
+- After each image publish, run a scripted login test against one canary host that validates shell render within 60 seconds.
+- Store the result with timestamp, session host name, and image ID in the change ticket.
+
+4. Add event capture for the render path.
+- Collect and retain TerminalServices-LocalSessionManager Operational events 21, 22, and 24 and System event 4101 for AVD hosts during the first hour after rollout.
+- Forward them into the monitoring workspace or the incident evidence store.
+
+5. Gate rollout on a healthy control-pool comparison.
+- POOL-FIN-02 must remain on the previous image until POOL-FIN-01 canary validation is complete.
+- Do not update both pools in the same maintenance wave for this service.
+
+6. Pre-stage fallback assignment automation.
+- Maintain a tested security group or documented assignment script for rapid routing to POOL-FIN-02.
+- Review membership rights quarterly so incident responders do not lose the ability to route users during an outage.
+
+## Related
+- Day4 analysis hypothesis for this incident.
+- Day4 known error record for this incident.
+- Day4 closure note for this incident.
+- POOL-FIN-02 fallback routing procedure.
+- Future KBs covering FSLogix profile attach failure and AVD sign-in failures should be cross-linked because they are close symptom matches but different root causes.
